@@ -22,26 +22,26 @@
 <body>
     <script>
         // on va écrire dans le body donc on le sélectionne
-        const bodyModif = document.querySelector("bodyModif");
+        const bodyModif = document.querySelector("body");
        
         // creation d'une div
-        let newDiv = document.createElement("div");
+        const newDiv = document.createElement("div");
        
         // ajout d'une class à la div
         newDiv.classList="blockArt";
        
         // creation d'une balise titre h1
-       let titre=document.createElement("h1")
+       const titre=document.createElement("h1")
         // ajout de texte
        titre.textContent="Les chatons c'est mignons !!!";
         // creation d'une image
         const image = document.createElement("img");
         // ajout de l'attribut src
-        image.src=""
+        image.src="./chaton.jpeg"
         // modification de width pour être à 100%
         image.style.width="100%";
         // creation d'un paragraphe
-        const newP = document.createElement('p');
+        const newP = document.createElement("p");
         // ajout de texte
         newP.textContent='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ';
         //Ajout des blocks à blockDiv
