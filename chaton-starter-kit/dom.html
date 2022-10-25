@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        .blockArt {
+            background-color: rgb(182, 68, 37);
+            padding: 30px;
+        }
+
+        body {
+            margin: 20px 100px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // on va écrire dans le body donc on le sélectionne
+        const bodyModif = document.querySelector("bodyModif");
+       
+        // creation d'une div
+        let newDiv = document.createElement("div");
+       
+        // ajout d'une class à la div
+        newDiv.classList="blockArt";
+       
+        // creation d'une balise titre h1
+       let titre=document.createElement("h1")
+        // ajout de texte
+       titre.textContent="Les chatons c'est mignons !!!";
+        // creation d'une image
+        const image = document.createElement("img");
+        // ajout de l'attribut src
+        image.src=""
+        // modification de width pour être à 100%
+        image.style.width="100%";
+        // creation d'un paragraphe
+        const newP = document.createElement('p');
+        // ajout de texte
+        newP.textContent='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ';
+        //Ajout des blocks à blockDiv
+       newDiv.prepend(titre, image, newP);
+        //Ajout de blockDiv au body
+       bodyModif.prepend(newDiv);
+
+    </script>
+</body>
+
+</html>
