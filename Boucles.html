@@ -15,11 +15,37 @@
         totalGroupe=0;
 
         for(let i=0; i<groupe.length; i++){
-            totalGroupe=groupe[i]+totalGroupe
-            console.log(totalGroupe/groupe.length)
+            totalGroupe=groupe[i]+totalGroupe;
+            console.log(totalGroupe/groupe.length);
         }
       groupe.sort();
       console.log(groupe);
+
+      //exercice 2
+
+      const gafa = [{ nom: "Google", url: "https://www.google.com" }, { nom: "Amazon", url: "https://www.amazon.fr" }, { nom: "Facebook", url: "https://www.facebook.fr" }, { nom: "Apple", url: "https://www.apple.fr" }]
+       
+      const budy=document.querySelector("body");
+      const listUl=document.createElement("ul");
+
+    gafa.forEach(function(gafaItem) { //ou alors gafaItem => {}
+        console.log(gafaItem.nom + " "+ gafaItem.url);
+          const creationTagA = document.createElement("a");
+           creationTagA.textContent = gafaItem.nom;
+           creationTagA.href = gafaItem.url;
+           const creationLi = document.createElement("li");
+           creationLi.prepend(creationTagA);
+           listUl.appendChild(creationLi);
+    })
+        budy.prepend(listUl); 
+
+      //exercice 3
+
+      for(i=0; i<=100; i++){
+        if(i % 5 == 0){
+            console.log(i + " est multiple de 5 !")
+        }
+      }
 
     </script>
 </body>
